@@ -1,1 +1,62 @@
 /* TODO: Example 01 (Activity 2) CSS goes here */
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+*{
+    box-sizing: inherit;
+}
+header {
+    font-size: 2rem;
+    color: white;
+    padding: 0 1rem;
+    height: 100px;
+    background-color: fuchsia;
+    line-height: 100px;
+}
+
+footer {
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    padding: 0 1rem;
+    height: 60px;
+    background-color: fuchsia;
+    line-height: 60px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#main-container{
+    display: table;
+    height: calc(100vh - 160px);
+}
+
+#main-container .box {
+    height: 100px;
+    line-height: 100px;
+    background-color: blue;
+    text-align: center;
+    color: white;
+    margin: 1rem 1rem 0 1rem;
+}
+
+#main-container [featured] {
+    border: 5px solid D#086c82; 
+    background-color: black;
+}
+
+
+#main-container [selected] {
+    color: #7597a8;
+    background-color: #82d3ec;
+}
+
+#aside-col {
+    display: none;
+}
