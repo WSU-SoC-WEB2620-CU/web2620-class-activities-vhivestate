@@ -1,135 +1,113 @@
-/* TODO: Example 05 (Activity 6) CSS goes here *//* TODO: Example 04 (Activity 5) CSS goes here */
-html {
-    height: 100%;
-    box-sizing: border-box;
+/* TODO: Example 02 (Activity 3) CSS goes here */
+* {
+    box-sizing: inherit;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: #000000;
+}
+
+nav > ul > li {
+    background-color: aliceblue;
+    margin-left: 1rem;
+    list-style-type: none;
+}
+
+nav > ul {
+    display: flex;
+}
+/* lets you seperate nav elements*/
+nav > ul > li:nth-child(1){
+    margin-left: auto;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.featured, .aside, .card {
+    background-color: rgba(210, 30, 30, 0.934);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+#login > input {
+    padding: .4rem;
+}
+
+#pricing > span:nth-child(2) {
+    font-size: 4rem;
+}
+
+button {
+    background-color: rgb(240, 204, 204);
+    padding: .75rem;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.25rem;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
 }
 
-.container {
+header {
+    grid-column: 1 / span 1;
+    font-size: 2rem;
+    background: none;
+    align-self: center;
+}
+
+nav {
+    grid-column: 2 / span 2;
+    /* background-color: #f0f0f0;
+    padding: 1rem; */
+    background: none;
+}
+
+.featured {
+    grid-area: 2 / 1 / span 2 / span 2;
+}
+
+#login {
+    grid-area: 2 / 3 / span 1 / span 1;
+}
+
+#pricing {
+    grid-area: 3 / 3 / span 1 / span 1;
+}
+
+#card1 {
+    grid-area: 4 / 1 / span 1 / span 1;
+}
+
+#card2 {
+    grid-area: 4 / 2 / span 1 / span 1;
+}
+
+#card3 {
+    grid-area: 4 / 3 / span 1 / span 1;
+}
+
+footer {
+    grid-area: 5 / 1 / span 1 / span 3;
+    justify-self: center;
+}
+
+#login {
     display: flex;
     flex-flow: column nowrap;
-    flex: 1 1 0;
 }
 
-.box {
-    width: 100%;
-    height: 100%;
-}
-
-.row1 {
-    background-color: blue;
-    display: flex;
-    flex: 1 1 50px;
-    margin-bottom: .5rem;
-}
-
-.row2 {
+#pricing {
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
 }
 
-.row2 > .box {
-    background-color: green;
-    flex: 1 1 20px;
-    margin-bottom: .5rem;
-}
-
-.row3 {
-    display: flex;
-    flex-flow: column nowrap;
-}
-
-.row3 > .col1 {
-    background-color: red;
-    flex: 1 1 200px;
-    margin-bottom: .5rem;
-}
-
-.row3 > .col2col3 {
-    display: flex;
-    flex-flow: row nowrap;
-    flex: 1 1 200px;
-    gap: 10px;
-}
-
-.row3 > .col2col3 > .col2 {
-    display: flex;
-    flex-flow: column nowrap;
-    flex: 1 1 50px;
-}
-
-.row3 > .col2col3 > .col3 {
-    display: flex;
-    flex-flow: column nowrap;
-    flex: 1 1 50px;
-}
-
-.row3 > .col2col3 > .col2 > .col2left, .row3 > .col2col3 > .col2 > .col2right {
-    display: flex;
-    flex: 1 1 0;
-    flex-flow: column nowrap;
-    gap: .5rem;
-    margin-bottom: .5rem;
-}
-
-.row3 > .col2col3 > .col2 > .col2left > .box , .row3 > .col2col3 > .col2 > .col2right > .box {
-    background-color: yellow;
-}
-
-.row3 > .col2col3 > .col3 {
-    display: flex;
-    flex: 1 1 50px;
-    background-color: purple;
-    margin-bottom: .5rem;
-}
-
-.row4 {
-    flex: 1 1 50px;
-    background-color: orange;
-}
-
-/*media q*/
-@media all and (min-width: 501px) and (max-width: 800px) {
-
-    .row2 {
-        flex-flow: row nowrap;
-        flex: 1 1 30px;
-        gap: 10px;
-        margin-top: .2rem;
-        margin-bottom: .5rem;
-    }
-
-    .row3 > .col1 {
-        flex: 1 1 400px;
-    }
-
-    .row3 > .col2col3 > .col2 {
-        flex-flow: column nowrap;
-        gap: 10px;
-    }
-}
-
-@media all and (min-width: 801px) {
-    .row2 {
-        flex-flow: row nowrap;
-        flex: 1 1 30px;
-        gap: 10px;
-        margin-top: .2rem;
-        margin-bottom: .5rem;
-    }
-
-    .row3 > .col1 {
-        flex: 1 1 400px;
-    }
-
-    .row3 > .col2col3 > .col2 {
-        flex-flow: column nowrap;
-        gap: 10px;
-    }
+#pricing > button {
+    align-self: stretch;
 }
